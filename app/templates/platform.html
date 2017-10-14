@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block styles %}
+{{ super() }}
+<link href="{{ url_for('static', filename = 'stories.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<div class="container">
+        
+              <div class="blog-header">
+                <h1 class="blog-title">The Platform</h1>
+                <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+              </div>
+        
+              <div class="row">
+        
+                <div class="col-sm-8 blog-main">
+        
+                  <div class="blog-post">
+                    <h2 class="blog-post-title">Harnessing an Effecient Platform</h2>
+                    <p class="blog-post-meta">October 14, 2017 by <a href="http://bit.ly/lukya">Ben Lukyamuzi</a></p>
+        
+                    <!-- <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+                    <hr>
+                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p> -->
+                    <blockquote>
+                      <p>Alibaba could seem like a genious invention, but plainly
+                          The founders knew that there were millions of customers who wanted to 
+                          buy from markets they could not access, and thousands of merchants that wanted to sell to customers 
+                          they could not access. 
+                          So Why not give the lot a platform to interact, its however worth noting that places like amazon 
+                          created their own merchandise hence are not a clearer example of a good PLatform
+                      </p>
+                    </blockquote>
+                    
+                    <h2>So Why do we need a platform?</h2>
+                    <p>Meet Fatumah, a reknownn an=d commited Weatherheader who tried to raise funds for 
+                        one of our very own so she could access better medical care. <br>
+                        Her model was crowdfunding, get a something from everyone till she raise the required amount.
+                        <br> Great way, Right?. But her means were crude. She was brute forcing her way 
+                        through everything. And in case She didn't tell you how tiring that was, Let me shed sme light 
+                        on it. She literally had to make announcement on whatsapp and crucial messages 
+                        never got to the right audience. Accountability must have been hectic, rememebring who sent what 
+                        and when is not an easy thing
+                        
+                
+
+                    </p>
+                    <h3>Let me show you a Ninja way</h3>
+                    <p>Well she needed to raise just about 1,500 USD. Which is a rather convenient ammount
+                        to raise by brute force means.
+                        Given we need upto 300,000 USD, We need a way to Learn fast, adapt better and move faster
+                        We an off the top notch way of knowing who gave in what and when
+
+                    </p>
+                    
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                    <h3>So What is Next</h3>
+                    <p>So the Platforrm is underway, given its complete, It will be able to do
+                        the following for us
+                    </p>
+                    <ul>
+                      <li>Securely Accept cotributins from any paymants Cars ie PayPal, debit and Credit cards</li>
+                      <li>Accept mobile money straight from within the site or by USSD</li>
+                      <li>Analytics</li>
+                    </ul>
+                    
+
+        
+            </div><!-- /.container -->
+{% endblock %}

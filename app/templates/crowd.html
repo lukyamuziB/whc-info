@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block styles %}
+{{ super() }}
+<link href="{{ url_for('static', filename = 'stories.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<div class="container">
+        
+              <div class="blog-header">
+                <h1 class="blog-title">Raising 300,000 USD</h1>
+                <p class="lead blog-description">Backed by a community that belives our cause 
+                    has the right moral ethics and value, raising the money shouldnt be a problem
+                </p>
+              </div>
+        
+              <div class="row">
+        
+                <div class="col-sm-8 blog-main">
+        
+                  <div class="blog-post">
+                    <h2 class="blog-post-title">Sample blog post</h2>
+                    <p class="blog-post-meta">October 14, 2017 by <a href="#">Ben Lukyamuzi</a></p>
+        
+                    <!-- <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+                    <hr>
+                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <blockquote>
+                      <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </blockquote>
+                    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+                    <h2>Why Crowdfunding</h2>
+                    <p>300,000 USD is a huge chunk of money, even if each one of us in weatherhaed gave up their annual salary,
+                        it would still take us about 8 years to raise that money 
+                        But we don't have to because with Crowdfunding, everyone that backs our cause contributes just what they
+                        can afford and leaave the rest to do the rest
+                    </p>
+                    <h3>So What is our Immediate need</h3>
+                    <p>You, the players and historicals, be the first to back our own cause
+                        
+                    </p>
+                    <!-- <pre><code>Example code block</code></pre>
+                    <p>Aenean lacinia bibendum nulla sed consectetur.
+                         Etiam porta sem malesuada magna mollis euismod. Fusc
+                         e dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p> -->
+                    <h3> How Can We contrbute or Back the campaign</h3>g</h3>
+                    <p>Bcause we want just every one to be involved, you can back us or contribue through one of the following
+                        ways
+                    </p>
+                    <ul>
+                      <li>PayPal</li>
+                      <li>Any Debit and Credit Card</li>
+                      <li>Mobile Money</li>
+                    </ul>
+                  </div><!-- /.blog-post -->
+    
+
+            </div><!-- /.container -->
+{% endblock %}
