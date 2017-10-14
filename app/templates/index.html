@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
+{% block title %} Info | Weatherhead {% endblock %}
+
 {% block content %}
 {{ super() }}
 <div class="container">
     <div class="jumbotron">
       <h1>Weatherhead at 20</h1>
       <p class="lead">Celebrating 20 years came with an idea of building a sustainable home of our own.
-         And that needs about <strong>300,000 USD</strong> to get us a really good place. But the question is how do we 
+         And that needs about <strong>200,000 USD</strong> to get us a really good place. But the question is how do we 
          get all that money in a short time? 
          Well, I made this to show you how...
 
@@ -24,8 +26,8 @@
         <div class="col-lg-4">
           <img class="img-circle" src="{{ url_for('static' , filename = 'images.jpg') }}" alt="Generic placeholder image" width="140" height="140">
           <h2>CrowFunding</h2>
-          <p>Raising 300,00 USD doesn't mean that each one of us has to contribute a huge chunc of money, it means 
-            that you contribute a small amount and then make everyone you know do the same. Which is more or less like a campaign <br>
+          <p>Raising 200,000 USD doesn't mean that each one of us has to contribute a huge chunc of money, it means 
+            that you contribute a small amount and then make everyone else you know do the same. Which is more or less like a campaign <br>
             But since we can't do that by word of mouth, we need a platform with the Auditability, tracebaility, workflow control and 
             security to manage the campaign for us.
           
@@ -35,15 +37,17 @@
         <div class="col-lg-4">
           <img class="img-circle" src="{{ url_for('static' , filename = 'pledge.jpg') }}" alt="Generic placeholder image" width="140" height="140">
           <h2>Platform</h2>
-          <p>Facebook the world's largest media owner does not create any content, Uber, the world's largets taxi company
-             don't own any cars, Alibaba, the world's most valubale retailer does not own any inventories. <br>
-            All those companies own nothing but a PLatform and that's thus how influential platforms can be
+          <p>Facebook the world's largest media owner does not create any content, Uber, the world's
+             largest taxi company
+             doesn't own any cars, Alibaba, the world's most valubale retailer does not own any inventories. <br>
+            All those companies own nothing but a Platform and that's 
+            how influential platforms have become in modern times
           </p>
           <p><a class="btn btn-default" href="{{ url_for('main.platform') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="{{ url_for('static' , filename = 'partner.jpg') }}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Resources</h2>
+          <h2>What we Need</h2>
           <p>So we have a the crowd and we have the platform <br>
             But we still need a couple of things to get going. And the first thing we need is your surpport. Back us and enable 
             Weatherhead build a new home. Let's commemorate 20 years with an achievement that is just steps away
@@ -54,7 +58,7 @@
 
 
       <!-- START THE FEATURETTES -->
-
+<!-- 
       <hr class="featurette-divider">
 
       <div class="row featurette">
@@ -63,7 +67,7 @@
           <p class="lead"></p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" data-src="{{ url_for('static', filename = 'crowd.jpg') }}" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -91,7 +95,7 @@
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider"> -->
 
       <!-- /END THE FEATURETTES -->
 
