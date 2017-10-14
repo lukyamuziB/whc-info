@@ -1,76 +1,8 @@
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="crowdfunding, weatherhaed, hockey, hockey club, hockey Uganda, Hockey kampala">
-    <meta name="author" content="">
-    <link rel="icon" href="{{ url_for('static', filename = 'whc.ico')}}">
-
-    <title>Info | Weatherhead</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="{{ url_for('static', filename = 'IE.css') }}" rel="stylesheet">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename = 'core.css') }}" rel="stylesheet">
-  </head>
-<!-- NAVBAR
-================================================== -->
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="{{ url_for('main.index') }}">Weatherhaed</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ url_for('main.index') }}">Home</a></li>
-                <li><a href="{{ url_for('main.index') }}">About</a></li>
-                <li><a href="{{ url_for('main.index') }}">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Featured Players</a></li>
-                    <li><a href="#">Historicals</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Founders</li>
-                    <li><a href="#">Historicals</a></li>
-                    <li><a href="#">Featured Historicals</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
-    </div>
-    <br> <br>
-    <div class="container">
+{% block content %}
+{{ super() }}
+<div class="container">
     <div class="jumbotron">
       <h1>Weatherhead at 20</h1>
       <p class="lead">Celebrating 20 years came with an idea of building a sustainable home of our own.
@@ -79,7 +11,6 @@
          Well, I made this to show you how...
 
       </p>
-      <p><a class="btn btn-lg btn-success" href="#" role="button">Find out more</a></p>
     </div>
   </div>
 
@@ -99,7 +30,7 @@
             security to manage the campaign for us.
           
           </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{ url_for('main.crowdfunding') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="{{ url_for('static' , filename = 'pledge.jpg') }}" alt="Generic placeholder image" width="140" height="140">
@@ -108,7 +39,7 @@
              don't own any cars, Alibaba, the world's most valubale retailer does not own any inventories. <br>
             All those companies own nothing but a PLatform and that's thus how influential platforms can be
           </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{ url_for('main.platform') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="{{ url_for('static' , filename = 'partner.jpg') }}" alt="Generic placeholder image" width="140" height="140">
@@ -117,7 +48,7 @@
             But we still need a couple of things to get going. And the first thing we need is your surpport. Back us and enable 
             Weatherhead build a new home. Let's commemorate 20 years with an achievement that is just steps away
           </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{ url_for('main.required') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -164,24 +95,8 @@
 
       <!-- /END THE FEATURETTES -->
 
+{% endblock %}
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ url_for('static', filename = 'core.js' ) }}></script>
-  </body>
-</html>
+{% block footer %}
+{{ super() }}
+{% endblock %}
